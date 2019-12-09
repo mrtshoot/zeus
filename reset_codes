@@ -1,2 +1,2 @@
 #!/bin/bash
-echo > /home/mrtshoot/zeus/codes.txt
+echo > /home/mrtshoot/zeus/zeus/codes.txt
