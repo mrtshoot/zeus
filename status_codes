@@ -1,5 +1,8 @@
 #!/bin/bash
-curl -X $1 -o /dev/null -s -w "%{http_code}\n" $2 | 
-while IFS= read -r line;do 
-printf '[%s] %s\n' "$(date '+%Y-%m-%d %H:%M:%S')" "$line"
+for i in $( seq 1 10 );do 
+	curl -X $1 -o /dev/null -s -w "%{http_code}\n" $2 | 
+	while IFS= read -r line;do 
+	printf '[%s] %s\n' "$(date '+%Y-%m-%d %H:%M:%S')" "$line"
+	done&
 done
+exit

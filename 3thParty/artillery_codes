@@ -1,0 +1,4 @@
+#!/bin/bash
+for i in $( seq 1 9 );do 
+	artillery run -e production loadTest.yml&
+done
